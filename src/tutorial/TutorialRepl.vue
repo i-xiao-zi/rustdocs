@@ -8,12 +8,9 @@ import {
   resolveNoBuildExample,
   onHashChange
 } from '../examples/utils'
-import PreferenceSwitch from '@theme/components/PreferenceSwitch.vue'
 import {
-  VTFlyout,
   VTIconChevronLeft,
   VTIconChevronRight,
-  VTLink
 } from '@vue/theme'
 
 const store = new ReplStore({
@@ -108,16 +105,6 @@ updateExample()
 <template>
   <section class="tutorial">
     <article class="instruction" ref="instruction">
-      <PreferenceSwitch />
-      <VTFlyout :button="`${currentStepIndex} / ${totalSteps}`">
-        <VTLink
-          v-for="(step, i) of allSteps"
-          class="vt-menu-link"
-          :class="{ active: i + 1 === currentStepIndex }"
-          :href="step.link"
-          >{{ step.text }}</VTLink
-        >
-      </VTFlyout>
       <div class="vt-doc" v-html="currentDescription"></div>
       <div class="hint" v-if="data[currentStep]?._hint">
         <button @click="toggleResult">
