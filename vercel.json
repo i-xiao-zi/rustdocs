@@ -25,5 +25,6 @@
       "source": "/:path*",
       "destination": "/:path*.html"
     }
-  ]
+  ],
+  "outputDirectory": "dist"
 }
