@@ -21,6 +21,7 @@ export default defineConfigWithTheme<ThemeConfig>({
   description: 'Vue.js - The Progressive JavaScript Framework',
   srcDir: 'src',
   srcExclude: ['tutorial/**/description.md'],
+  outDir: 'dist',
 
   head: [
     ['meta', { name: 'theme-color', content: '#3c8772' }],
