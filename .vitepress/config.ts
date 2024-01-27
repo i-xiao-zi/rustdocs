@@ -17,44 +17,21 @@ export default defineConfigWithTheme<ThemeConfig>({
   extends: baseConfig,
   vite,
   lang: 'en-US',
-  title: 'Vue.js',
-  description: 'Vue.js - The Progressive JavaScript Framework',
+  title: 'Rust非官方不完全网站',
+  description: 'Rust&Rust扩展 - 非官方不完全中文文档',
   srcDir: 'src',
   srcExclude: ['tutorial/**/description.md'],
   outDir: 'dist',
 
   head: [
     ['meta', { name: 'theme-color', content: '#3c8772' }],
+    ['meta', { name: 'keywords', content: 'Rust,Axum,中文文档' }],
     ['meta', { property: 'og:url', content: 'https://vuejs.org/' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: 'Vue.js' }],
-    [
-      'meta',
-      {
-        property: 'og:description',
-        content: 'Vue.js - The Progressive JavaScript Framework'
-      }
-    ],
-    [
-      'meta',
-      {
-        property: 'og:image',
-        content: 'https://vuejs.org/images/logo.png'
-      }
-    ],
-    ['meta', { name: 'twitter:site', content: '@vuejs' }],
-    ['meta', { name: 'twitter:card', content: 'summary' }],
-    [
-      'link',
-      {
-        rel: 'preconnect',
-        href: 'https://sponsors.vuejs.org'
-      }
-    ],
-    [
-      'script',
-      {},
-      fs.readFileSync(
+    ['meta', { property: 'og:description', content: 'Rust&Rust扩展 - 非官方不完全中文文档' }],
+    ['meta', { property: 'og:image', content: 'https://www.rust-lang.org/static/images/rust-logo-blk.svg' }],
+    ['script', {}, fs.readFileSync(
         path.resolve(__dirname, './inlined-scripts/restorePreference.js'),
         'utf-8'
       )
@@ -68,13 +45,6 @@ export default defineConfigWithTheme<ThemeConfig>({
         defer: ''
       }
     ],
-    [
-      'script',
-      {
-        src: 'https://vueschool.io/banner.js?affiliate=vuejs&type=top',
-        async: 'true'
-      }
-    ]
   ],
 
   themeConfig: {
