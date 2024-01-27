@@ -1,6 +1,6 @@
 ---
 page: true
-title: Vue.js - The Progressive JavaScript Framework
+title: Rust&Rust扩展 - 非官方不完全中文文档
 ---
 
 <script setup>

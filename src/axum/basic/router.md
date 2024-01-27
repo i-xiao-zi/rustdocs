@@ -3,9 +3,15 @@ footer: false
 ---
 
 # 路由 
+
+:::tip 说明
+- 什么是路由？是用于设置由哪些路径转到哪些服务的。
+- `Auxum`的`Router`是一个用于组合处理程序和服务的结构体：
 ```rust
 pub struct Router<S = ()> { /* private fields */ }
 ```
+:::
+
 ## 一、路由规则
 
 ```rust
@@ -20,19 +26,18 @@ async fn get_method() {}
 async fn post_method() {}
 ```
 
-### 说明：
-
-#### 1. 通过Router::new()创建一个Router实例：
+### 1. 通过Router::new()创建一个Router实例：
 ```rust
 pub fn new() -> Self
 ```
 
-#### 2. 通过route()方法添加路由，
+### 2. 通过route()方法添加路由，
 ```rust
 pub fn route(self， path： &str， method_router： MethodRouter<S>) -> Self
 ```
 
-1. 第一个参数`path`是路由路径，用`/`分割，每个部分可以是静态(`static`)、捕获(`capture`)、通配符(`wildcard`)，
+#### 1. 第一个参数`path`是路由路径
+用`/`分割，每个部分可以是静态(`static`)、捕获(`capture`)、通配符(`wildcard`)：
    * **静态**：传入请求与路径完全匹配，如，
      -`/`：匹配`/`
      -`/user`: 匹配`/user`, 不匹配`/user/`
@@ -43,14 +48,14 @@ pub fn route(self， path： &str， method_router： MethodRouter<S>) -> Self
      - `/:key`: 匹配`/a`,不匹配`/a/`
      - `/user/:id`: 匹配`/user/`,`/user/abc`,不匹配`/user`,`/user/abc/`
      - `/user/:id/tweets`: 匹配`/user//tweets`,`/user/abc/tweets`,不匹配`/user/tweets/`,`/user/abc/tweets/`
-        >      无法仅匹配类型（如数字或正则表达式），您必须在处理程序中中手动解析它。
+     > 无法仅匹配类型（如数字或正则表达式），您必须在处理程序中手动解析它。
 
    * **通配符**：可以以匹配所有段的路径结束，并将存储这些段，这与空段不匹配,如，
      - `/*key`: 匹配`/a`,`/a/`,不匹配`/`
      - `/user/*key`: 匹配`/user/a`，`/user/a/`，`/user/a/tweets`，不匹配`/user`，`/user/`
      - `/:id/:repo/*tree`: 你猜？
 
-2. 第二个参数是路由方法
+#### 2. 第二个参数是路由方法
   ```rust
   pub struct MethodRouter<S = (), E = Infallible> {
       get: MethodEndpoint<S, E>,
@@ -81,7 +86,7 @@ pub fn route(self， path： &str， method_router： MethodRouter<S>) -> Self
         .route("/", get(get_method).post(post_method).delete(delete_method));
     ```
 
-3. 异常与优先级：
+#### 3. 异常与优先级：
    * 如果一条`route`与另一条`route` 重叠，则会发生异常。
    * 静态路由（`static`）和动态路由（`capture`,`wildcard`）不被视为重叠，静态路由优先级高，动态路由优先级低。
    * 如果为空，也会触发异常，如，

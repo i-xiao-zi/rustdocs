@@ -5,7 +5,7 @@ const nav: ThemeConfig['nav'] = [
         text: '文档',
         activeMatch: `^/(guide|style-guide|cookbook|examples)/`,
         items: [
-            { text: 'Rust文档', link: '/rust/introduction' },
+            { text: 'Rust非官方不完全文档', link: '/rust/introduction' },
             { text: 'Axum非官方不完全文档', link: '/axum/introduction' },
         ]
     },

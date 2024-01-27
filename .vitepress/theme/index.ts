@@ -5,9 +5,15 @@ import {
   preferSFC,
   filterHeadersByPreference
 } from './components/preferences'
+// @ts-ignore
 import NavBarTitle from './components/NavBarTitle.vue'
+// @ts-ignore
+import DocumentComment from './components/DocumentComment.vue'
+// @ts-ignore
 import SponsorsAside from './components/SponsorsAside.vue'
+// @ts-ignore
 import VueSchoolLink from './components/VueSchoolLink.vue'
+// @ts-ignore
 import Banner from './components/Banner.vue'
 // import TextAd from './components/TextAd.vue'
 import 'virtual:windi.css';
@@ -20,6 +26,7 @@ export default Object.assign({}, VPTheme, {
       banner: () => h(Banner),
       'navbar-title': () => h(NavBarTitle),
       'sidebar-top': () => '文档',
+      'content-bottom': () => h(DocumentComment),
       'aside-mid': () => h(SponsorsAside)
     })
   },
