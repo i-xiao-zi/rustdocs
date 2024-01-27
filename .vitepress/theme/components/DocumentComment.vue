@@ -15,7 +15,7 @@ onMounted(() => {
       clientID: '2a6aa400c043ae93e637', // 自己的clientID
       clientSecret: '40d75a0c40034d5b7fe3712d595bdcaf9c005564',// 自己的clientSecret
       admin: ['i-xiao-zi'], // GitHub repository 所有者
-      // labels: ['document.comment'], // GitHub issue 的标签
+      labels: ['@document/comment$'], // GitHub issue 的标签
       createIssueManually: true, //如果当前页面没有相应的 isssue 且登录的用户属于 admin，则会自动创建 issue。如果设置为 true，则显示一个初始化页面，创建 issue 需要点击 init 按钮。
     }).render('document-comment-container')
   }
