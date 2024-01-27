@@ -35,7 +35,7 @@ const head: UserConfig['head'] = [
 
 const i18n: ThemeConfig['i18n'] = {}
 const algolia: ThemeConfig['algolia'] = undefined
-const localeLinks: ThemeConfig['localeLinks'] = []
+const localeLinks: ThemeConfig['localeLinks'] = false
 const carbonAds: ThemeConfig['carbonAds'] = undefined
 const socialLinks: ThemeConfig['socialLinks'] = []
 const editLink: ThemeConfig['editLink'] = undefined

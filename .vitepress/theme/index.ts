@@ -25,7 +25,7 @@ export default Object.assign({}, VPTheme, {
   Layout: () => {
     // @ts-ignore
     return h(VPTheme.Layout, null, {
-      banner: () => h(Banner),
+      // banner: () => h(Banner),
       'navbar-title': () => h(NavBarTitle),
       'sidebar-top': () => h(SidebarTop),
       'content-bottom': () => h(DocumentComment),
@@ -36,7 +36,7 @@ export default Object.assign({}, VPTheme, {
     app.provide('prefer-composition', preferComposition)
     app.provide('prefer-sfc', preferSFC)
     app.provide('filter-headers', filterHeadersByPreference)
-    app.component('VueSchoolLink', VueSchoolLink)
+    // app.component('VueSchoolLink', VueSchoolLink)
     // app.component('TextAd', TextAd)
   }
 })
