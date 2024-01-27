@@ -6,6 +6,8 @@ import {
   filterHeadersByPreference
 } from './components/preferences'
 // @ts-ignore
+import SidebarTop from './components/SidebarTop.vue'
+// @ts-ignore
 import NavBarTitle from './components/NavBarTitle.vue'
 // @ts-ignore
 import DocumentComment from './components/DocumentComment.vue'
@@ -25,7 +27,7 @@ export default Object.assign({}, VPTheme, {
     return h(VPTheme.Layout, null, {
       banner: () => h(Banner),
       'navbar-title': () => h(NavBarTitle),
-      'sidebar-top': () => '文档',
+      'sidebar-top': () => h(SidebarTop),
       'content-bottom': () => h(DocumentComment),
       'aside-mid': () => h(SponsorsAside)
     })
