@@ -52,10 +52,7 @@ export default defineConfigWithTheme<ThemeConfig>({
   vite,
   head,
   lang: 'en-US',
-  title: (() => {
-    console.log(document.location.pathname)
-    return 'Rust非官方不完全网站'
-  })(),
+  title: 'Rust非官方不完全网站',
   description: 'Rust&Rust扩展 - 非官方不完全中文文档',
   srcDir: 'src',
   srcExclude: ['tutorial/**/description.md'],
