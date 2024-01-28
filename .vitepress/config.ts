@@ -35,6 +35,7 @@ const head: UserConfig['head'] = [
 
 const i18n: ThemeConfig['i18n'] = {}
 const algolia: ThemeConfig['algolia'] = undefined
+// @ts-ignore
 const localeLinks: ThemeConfig['localeLinks'] = false
 const carbonAds: ThemeConfig['carbonAds'] = undefined
 const socialLinks: ThemeConfig['socialLinks'] = []

@@ -5,17 +5,21 @@ const nav: ThemeConfig['nav'] = [
         text: '文档',
         activeMatch: `^/(guide|style-guide|cookbook|examples)/`,
         items: [
-            { text: 'Rust非官方不完全文档', link: '/rust/introduction' },
-            { text: 'Axum非官方不完全文档', link: '/axum/introduction' },
+            { text: 'Rust 非官方不完全文档', link: '/rust/introduction' },
+            { text: 'Axum 非官方不完全文档', link: '/axum/' },
+            { text: 'Askama 非官方不完全文档', link: '/askama/' },
         ]
     },
     {
         text: '参考',
         items: [
-            { text: 'Rust官网', link: 'https://www.rust-lang.org/' },
-            { text: 'Rust文档', link: 'https://docs.rs/' },
-            { text: 'Rust仓库', link: 'https://crates.io/' },
-            { text: 'Axum', link: 'https://github.com/tokio-rs/axum/' },
+            { text: 'Rust官方网站 (rust-lang.org)', link: 'https://www.rust-lang.org/' },
+            { text: 'Rust官方文档 (docs.rs)', link: 'https://docs.rs/' },
+            { text: 'Rust仓库 (crates.io)', link: 'https://crates.io/' },
+            { text: 'Axum官方仓库 (github.com)', link: 'https://github.com/tokio-rs/axum/' },
+            { text: 'Askama官方仓库 (github.com)', link: 'https://github.com/djc/askama' },
+            { text: 'Askama官方文档 (docs.rs)', link: 'https://docs.rs/askama/' },
+            { text: 'Askama官方文档 (english)', link: 'https://djc.github.io/askama/' },
         ]
     },
     {

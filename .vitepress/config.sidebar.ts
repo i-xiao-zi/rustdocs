@@ -16,7 +16,7 @@ const axum: SidebarGroup[] = [
   {
     text: '介绍',
     items: [
-      { text: '简介', link: '/axum/introduction' }
+      { text: '简介', link: '/axum/index' }
     ]
   },
   {
@@ -30,9 +30,24 @@ const axum: SidebarGroup[] = [
     ]
   }
 ]
+const askama: SidebarGroup[] = [
+  {
+    text: '介绍',
+    items: [
+      { text: '简介', link: '/askama/index' }
+    ]
+  },
+  {
+    text: '基础',
+    items: [
+      { text: '快速开始', link: '/askama/quick-start' }
+    ]
+  }
+]
  const sidebar: SidebarConfig = {
   '/rust/': rust,
   '/axum/': axum,
+  '/askama/': askama,
 }
 
 export default sidebar
