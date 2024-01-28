@@ -1,5 +1,6 @@
 import { h, App } from 'vue'
 import { VPTheme } from '@vue/theme'
+import googleAnalytics from 'vitepress-plugin-google-analytics'
 import {
   preferComposition,
   preferSFC,
@@ -38,5 +39,8 @@ export default Object.assign({}, VPTheme, {
     app.provide('filter-headers', filterHeadersByPreference)
     // app.component('VueSchoolLink', VueSchoolLink)
     // app.component('TextAd', TextAd)
+    googleAnalytics({
+      id: 'G-0Q7HP3Z035', //跟踪ID，在analytics.google.com注册即可
+    });
   }
 })
