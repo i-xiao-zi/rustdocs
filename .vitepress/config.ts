@@ -17,7 +17,7 @@ const head: UserConfig['head'] = [
   ['meta', { property: 'og:title', content: 'Vue.js' }],
   ['meta', { property: 'og:description', content: 'Rust&Rust扩展 - 非官方不完全中文文档' }],
   ['meta', { property: 'og:image', content: 'https://www.rust-lang.org/static/images/rust-logo-blk.svg' }],
-  ['meta', { property: 'google-site-verification', content: 'Ni7LoBztnOaXFnb07OiZhthVuKx4cuRgKd_YPwIVEOU' }],
+  ['meta', { name: 'google-site-verification', content: 'Ni7LoBztnOaXFnb07OiZhthVuKx4cuRgKd_YPwIVEOU' }],
   ['script', {}, fs.readFileSync(
     path.resolve(__dirname, './inlined-scripts/restorePreference.js'),
     'utf-8'
