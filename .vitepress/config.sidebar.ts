@@ -40,7 +40,10 @@ const askama: SidebarGroup[] = [
   {
     text: '基础',
     items: [
-      { text: '快速开始', link: '/askama/quick-start' }
+      { text: '快速开始', link: '/askama/quick-start' },
+      { text: '配置', link: '/askama/configuration' },
+      { text: '模板属性', link: '/askama/template-attribute' },
+      { text: '模板语法', link: '/askama/template-syntax' },
     ]
   }
 ]
