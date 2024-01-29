@@ -52,5 +52,16 @@ titleTemplate: Askama 非官方不完全文档
   }
   ```
 ### 3. 模板内声明变量(`Assignments`)
-在代码块内，您还可以声明变量或为变量赋值。其他模板无法导入。
-
+在代码块内，您还可以声明变量或为变量赋值。( _其他模板无法导入_ )。
+  ```rust
+  {% let name = user.name %}
+  {% let len = name.len() %}
+  
+  {% let val -%}
+  {% if len == 0 -%}
+    {% let val = "foo" -%}
+  {% else -%}
+    {% let val = name -%}
+  {% endif -%}
+  {{ val }}
+  ```
