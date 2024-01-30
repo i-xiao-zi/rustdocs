@@ -44,6 +44,7 @@ const askama: SidebarGroup[] = [
       { text: '配置', link: '/askama/configuration' },
       { text: '模板属性', link: '/askama/template-attribute' },
       { text: '模板语法', link: '/askama/template-syntax' },
+      { text: '过滤器', link: '/askama/filters' },
     ]
   }
 ]
