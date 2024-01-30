@@ -12,12 +12,11 @@ import vite from './config.vite'
 const head: UserConfig['head'] = [
   ['meta', { name: 'theme-color', content: '#3c8772' }],
   ['meta', { name: 'keywords', content: 'Rust,Axum,中文文档' }],
-  ['meta', { property: 'og:url', content: 'https://rust.yuufa.com/' }],
+  ['meta', { property: 'og:url', content: 'https://rust.wjjss.com/' }],
   ['meta', { property: 'og:type', content: 'website' }],
   ['meta', { property: 'og:title', content: 'Rust - 非官方不完全中文文档' }],
   ['meta', { property: 'og:description', content: 'Rust&Rust扩展 - 非官方不完全中文文档' }],
   ['meta', { property: 'og:image', content: 'https://www.rust-lang.org/static/images/rust-logo-blk.svg' }],
-  ['meta', { name: 'google-site-verification', content: 'Ni7LoBztnOaXFnb07OiZhthVuKx4cuRgKd_YPwIVEOU' }],
   ['script', {}, fs.readFileSync(
     path.resolve(__dirname, './inlined-scripts/restorePreference.js'),
     'utf-8'
@@ -52,7 +51,7 @@ const footer: ThemeConfig['footer'] = {
 export default defineConfigWithTheme<ThemeConfig>({
   extends: baseConfig,
   sitemap: {
-    hostname: 'https://rust.yuufa.com',
+    hostname: 'https://rust.wjjss.com',
   },
   vite,
   head,
