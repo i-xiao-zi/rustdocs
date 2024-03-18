@@ -20,7 +20,8 @@ import VueSchoolLink from './components/VueSchoolLink.vue'
 import Banner from './components/Banner.vue'
 // import TextAd from './components/TextAd.vue'
 import 'virtual:windi.css';
-import './styles/index.css'
+import './styles/index.css';
+import { install } from 'naive-ui';
 
 export default Object.assign({}, VPTheme, {
   Layout: () => {
@@ -34,6 +35,7 @@ export default Object.assign({}, VPTheme, {
     })
   },
   enhanceApp({ app }: { app: App }) {
+    install(app)
     app.provide('prefer-composition', preferComposition)
     app.provide('prefer-sfc', preferSFC)
     app.provide('filter-headers', filterHeadersByPreference)

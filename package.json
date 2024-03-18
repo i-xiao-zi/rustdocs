@@ -12,16 +12,19 @@
     "@vue/repl": "^3.0.0",
     "@vue/theme": "^2.2.5",
     "dynamics.js": "^1.1.5",
+    "element-plus": "^2.6.1",
     "gitalk": "^1.8.0",
     "gsap": "^3.9.0",
+    "naive-ui": "^2.38.1",
     "vitepress": "1.0.0-rc.33",
     "vue": "^3.4.0"
   },
   "devDependencies": {
     "@types/markdown-it": "^12.2.3",
     "@types/node": "^20.10.1",
-    "naive-ui": "^2.38.1",
     "terser": "^5.14.2",
+    "unplugin-auto-import": "^0.17.5",
+    "unplugin-vue-components": "^0.26.0",
     "vite-plugin-windicss": "^1.9.3",
     "vitepress-plugin-google-analytics": "^1.0.2",
     "windicss": "^3.5.6"

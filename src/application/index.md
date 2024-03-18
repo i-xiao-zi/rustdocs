@@ -4,13 +4,15 @@ title: Rust&Rust扩展 - 非官方不完全中文文档
 ---
 
 <script setup>
-import { ref } from 'vue';
-import { NTabs, NTabPane, NButtonGroup, NButton } from 'naive-ui';
+import { ref, onMounted } from 'vue';
 const tabs = ref([]);
-fetch('/tabs.json').then(res => res.json()).then(data => {
-  console.log(data);
-  tabs.value = data;
-})
+onMounted(() => {
+  fetch('/tabs.json').then(res => res.json()).then(data => {
+    console.log(data);
+    tabs.value = data;
+  })
+});
+
 </script>
 
 - a
