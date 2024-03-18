@@ -1,0 +1,22 @@
+{
+  "links": [
+    {
+      "link": "https://github.com/vuejs/vue-next",
+      "title": "GitHub"
+    },
+    {
+      "link": "https://v3.vuejs.org/",
+      "title": "Docs"
+    }
+  ],
+  "applications": [
+    {
+      "link": "https://github.com/vuejs/vue-next",
+      "title": "GitHub"
+    },
+    {
+      "link": "https://v3.vuejs.org/",
+      "title": "Docs"
+    }
+  ]
+}
